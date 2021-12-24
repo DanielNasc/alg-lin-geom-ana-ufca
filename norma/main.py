@@ -5,6 +5,7 @@ Programa que calcula a norma de um vetor v com n coordenadas.
 from sys import path
 path.insert(1, '../')
 from vectors import *
+from beauty_root import beauty_root
 
 def main():
     vector = get_vector()
@@ -16,7 +17,7 @@ def main():
         print("\nA norma do vetor é: {}".format(int(norm)))
     # Se não for um quadrado perfeito, então é impressa a apenas a soma dos quadrados com o simbolo de raiz.
     else:
-        print("\nA norma do vetor é: √{}".format(sum_squares))
+        print("\nA norma do vetor é: {}".format(beauty_root(sum_squares)))
 
 if __name__ == '__main__':
     main()
