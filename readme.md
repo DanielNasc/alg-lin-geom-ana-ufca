@@ -12,6 +12,7 @@ O que fiz até agora
 - Um programa para calcular a norma de um vetor;
 - Um programa para calcular o produto interno entre dois vetores;
 - Um programa para calcular o ângulo entre dois vetores;
+- Um programa para calcular o produto vetorial entre dois vetores;
 
 Ajude a melhorar o código
 ----------------------------

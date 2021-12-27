@@ -37,3 +37,16 @@ def inner_product(vector1, vector2):
     for i in range(len(vector1)):
         sum += vector1[i] * vector2[i]
     return sum
+
+def cross_product(v, w):
+    """
+    Calcula o produto vetorial de dois vetores
+    """
+    if len(v) != len(w):
+        raise ValueError("Vetores de tamanhos diferentes")
+    if len(v) != 3:
+        raise ValueError("Vetores de tamanho diferente de 3")
+    return [v[1]*w[2] - v[2]*w[1], v[2]*w[0] - v[0]*w[2], v[0]*w[1] - v[1]*w[0]]
+
+def pv(n):
+    print("\n=== Vetor {} ===".format(n))
