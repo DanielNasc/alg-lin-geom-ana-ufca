@@ -69,13 +69,13 @@ def pv(n):
 
 def checar_se_sao_colineares(v, w):
     """
-    Checa se dois vetores são colineares
+    Dois vetores em R^3 não nulos são colineares se, e somente se, || v ∧ w || = 0.
     """
     if len(v) != len(w):
         raise ValueError("Vetores de tamanhos diferentes")
-    if inner_product(v, w) == 0:
+
+    if (calculate_norm(cross_product(v, w))[0] == 0):
         return True
-    
     return False
 
 def simplificar_vetor(v):

@@ -29,7 +29,8 @@ def equacao_reta(n, A: list):
 def equacao_plano(n: list, A: list):
 
     ax = adicao_ou_subtracao(n[0], "x")
-    ax = ax[2:] if ax[0] == "+" else ax
+    if (len(ax)):
+        ax = ax[2:] if ax[0] == "+" else ax
 
     return "r: {} {} {} {} = 0".format(ax,
                                  adicao_ou_subtracao(n[1], "y"),
