@@ -5,6 +5,7 @@ from beauty_prints import equacao_reta
 
 from simple_term_menu import TerminalMenu
 
+
 def main():
     A = get_ponto('A', 2)
 
