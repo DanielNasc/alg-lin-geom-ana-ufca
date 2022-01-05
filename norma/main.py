@@ -5,7 +5,7 @@ Programa que calcula a norma de um vetor v com n coordenadas.
 from sys import path
 path.insert(1, '../')
 from vectors import *
-from beauty_root import beauty_root
+from beauty_prints import beauty_root
 
 def main():
     vector = get_vector()

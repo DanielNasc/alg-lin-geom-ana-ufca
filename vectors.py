@@ -66,3 +66,34 @@ def cross_product(v, w):
 
 def pv(n):
     print("\n=== Vetor {} ===".format(n))
+
+def checar_se_sao_colineares(v, w):
+    """
+    Checa se dois vetores são colineares
+    """
+    if len(v) != len(w):
+        raise ValueError("Vetores de tamanhos diferentes")
+    if inner_product(v, w) == 0:
+        return True
+    
+    return False
+
+def simplificar_vetor(v):
+    vetor_s = []
+
+    menor = v[0]
+    for i in range(len(v)):
+        if v[i] < menor:
+            menor = v[i]
+
+    metade_i_menor = abs(menor // 2)
+    for i in range(int(metade_i_menor) - 1):
+
+        for j in range(len(v)):
+            vetor_s.append(v[j] / (metade_i_menor - i))
+            if (v[j] % (metade_i_menor - i) != 0):
+                vetor_s = []
+                continue
+            if j == len(v) - 1 and len(vetor_s) == len(v):
+                return vetor_s
+    return v
