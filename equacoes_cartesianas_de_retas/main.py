@@ -1,12 +1,9 @@
 from sys import path
 path.insert(1, '../')
 from vectors import *
+from beauty_prints import equacao_reta
 
 from simple_term_menu import TerminalMenu
-
-"""
-Este script é apenas um protótipo.
-"""
 
 def main():
     A = get_ponto('A', 2)
@@ -27,11 +24,10 @@ def main():
 
 def com_A_e_n(A):
     print("\n=== Vetor normal à reta ===")
-    v = get_vector(2)
+    n = get_vector(2)
 
     print("\n> A equação da reta é dada por: r: ax + by + c = 0")
-    print("> Com isso, temos: r: {}x + {}y + {} = 0"
-            .format(v[0], v[1], -(v[0]*A[0] + v[1]*A[1])))
+    print("> Com isso, temos: {}".format(equacao_reta(n[0], n[1], A)))
 
 def com_A_e_B(A):
     B = get_ponto('B', 2)
@@ -47,8 +43,7 @@ def com_A_e_B(A):
     print(n, "\n")
     
     print("> A equação da reta é dada por: r: ax + by + c = 0")
-    print("> Com isso, temos: r: {}x + {}y + {} = 0"
-            .format(n[0], n[1], -(n[0]*A[0] + n[1]*A[1])))
+    print("> Com isso, temos: {}".format(equacao_reta(n[0], n[1], A)))
 
 if __name__ == '__main__':
     main()
