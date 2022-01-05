@@ -5,6 +5,22 @@ def get_int(description):
         print("Valor inválido.")
         return get_int(description)
 
+def get_float(description):
+    try:
+        return float(input(description))
+    except ValueError:
+        print("Valor inválido.")
+        return get_float(description)
+
+def get_ponto(letra, qtd_elementos):
+    print("=== Preencha os valores do ponto {} ===\n".format(letra))
+    ponto = []
+
+    for i in range(qtd_elementos):
+        ponto.append(get_float("Digite o valor da coordenada {}: ".format(
+            i+1 if i >= 3 else chr(i + 120))))
+    return ponto
+
 def get_vector(size=0):
     if not size:
         size = 0
