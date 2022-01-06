@@ -54,11 +54,11 @@ def com_A_e_B(A, qtd_c):
     if qtd_c == 2:
         pv("normal à reta")
         # O vetor normal pode ser obtido apenas trocando a posição dos pares ordenados e invertendo o sinal de um deles.
-        n = [v[1] * -1, v[0]]
+        n = simplificar_vetor([v[1] * -1, v[0]])
         print(n, "\n")
         
         print("> A equação da reta é dada por: r: ax + by + c = 0")
-        print("> Com isso, temos: {}".format(equacao_reta(n[0], n[1], A)))
+        print("> Com isso, temos: {}".format(equacao_reta(n, A)))
     # Já se o usuario estiver procurando a equação de um plano, precisamos de um ponto B e um ponto C não colineares
     else:
         C = get_ponto('C', qtd_c)
