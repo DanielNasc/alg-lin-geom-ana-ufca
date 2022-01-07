@@ -97,3 +97,13 @@ def simplificar_vetor(v):
             if j == len(v) - 1 and len(vetor_s) == len(v):
                 return vetor_s
     return v
+
+
+def calculate_vector(A, B):
+    """
+    Calcula o vetor AB
+    """
+    vector = []
+    for i in range(len(A)):
+        vector.append(B[i] - A[i])
+    return vector
