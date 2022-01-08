@@ -13,7 +13,9 @@ O que fiz até agora
 - Um programa para calcular o produto interno entre dois vetores;
 - Um programa para calcular o ângulo entre dois vetores;
 - Um programa para calcular o produto vetorial entre dois vetores;
-- Um programa para calcular equações cartesianas de retas e planos
+- Um programa para calcular equações cartesianas de retas e planos;
+- Um programa para calcular a distância entre um ponto e uma reta ou um plano;
+- Um programa para calcular áreas ou volumes em R² e R³ (incompleto por enquanto).
 
 Ajude a melhorar o código
 ----------------------------
