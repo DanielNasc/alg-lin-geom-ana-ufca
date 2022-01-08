@@ -1,3 +1,5 @@
+import beauty_prints as bp
+
 def get_int(description):
     try:
         return int(input(description))
@@ -107,3 +109,24 @@ def calculate_vector(A, B):
     for i in range(len(A)):
         vector.append(B[i] - A[i])
     return vector
+
+
+def distancia_ponto_reta_ou_plano(P, coeficientes):
+    num = 0
+    den = 0
+    
+    for i in range(len(P)):
+        num += P[i] * coeficientes[i]
+        den += coeficientes[i]**2
+    
+    num = abs(num + coeficientes[-1])
+    d = den
+    den = den**(1/2)
+
+    s = "{}/".format(num)
+    if den != int(den):
+        s += "{}".format(bp.beauty_root(d))
+    else:
+        s += "{}".format(den)
+
+    return [num/den, s]

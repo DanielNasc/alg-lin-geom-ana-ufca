@@ -32,7 +32,7 @@ def equacao_plano(n: list, A: list):
     if (len(ax)):
         ax = ax[2:] if ax[0] == "+" else ax
 
-    return "r: {} {} {} {} = 0".format(ax,
+    return "p: {} {} {} {} = 0".format(ax,
                                  adicao_ou_subtracao(n[1], "y"),
                                     adicao_ou_subtracao(n[2], "z"),
                                         adicao_ou_subtracao(-(n[0]*A[0] + n[1]*A[1] + n[2]*A[2]), ""))
