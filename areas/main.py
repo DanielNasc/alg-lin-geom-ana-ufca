@@ -3,23 +3,22 @@ path.insert(1, '../')
 from vectors import *
 from utils import *
 from simple_term_menu import TerminalMenu
+from beauty_prints import beauty_root
 
 def main():
     qtd_c = reta_ou_plano()
 
-    print("A área de um paralelogramo ", 
-            "em E^2 é dada por |det[u, v]|" if qtd_c == 2 else 
-            "em E^3 é dada por |det[u, v, w]|")
+    print(  "A área de um paralelogramo em E^2 é dada por |det[u, v]|" if qtd_c == 2 else 
+            "O volume de qualquer paralelepípedo em E^3 é dada por |det[u, v, w]|")
 
     menu = TerminalMenu(['Pontos ABCD', 'Vetores'], title='Que informações você tem?')
     escolha = menu.show()
     if escolha == 0:
-
-        com_pontos(qtd_c)
-    elif escolha == 1:
         if qtd_c == 3:
             print('Ainda não implementado')
             exit()
+        com_pontos(qtd_c)
+    elif escolha == 1:
         com_vetores(qtd_c)
 
 
@@ -30,7 +29,9 @@ def com_vetores(qtd_c):
         vectors.append(get_vector(qtd_c))
 
     if (qtd_c == 3):
-        print("A área é: ", calculate_norm(cross_product(vectors[0], vectors[1])))
+        vol = calculate_norm(cross_product(vectors[0], vectors[1]))
+        vol = vol[0] if vol[0] == int(vol[0]) else beauty_root(vol[1])
+        print("\nO volume é: ", vol)
         return
 
     print("\nA área é: ", abs(calculate_det(vectors)))
