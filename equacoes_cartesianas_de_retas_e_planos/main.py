@@ -2,15 +2,14 @@ from sys import path, exit
 path.insert(1, '../')
 from vectors import *
 from beauty_prints import equacao_reta, equacao_plano
+from utils import reta_ou_plano
 
 from simple_term_menu import TerminalMenu
 
 def main():
 
     # Usuario escolhe se quer a equação de uma reta ou de um plano.
-    menu = TerminalMenu(['Reta', 'Plano'], title='O que deseja calcular?')
-    escolha = menu.show()
-    qtd_coordenadas = escolha + 2
+    qtd_coordenadas = reta_ou_plano()
 
     # Pedir ao usuario um ponto A
     A = get_ponto('A', qtd_coordenadas)
